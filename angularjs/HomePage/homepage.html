@@ -1,0 +1,32 @@
+<html>
+<head>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="angularjs/app.module.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+   <script src="contacts/contact.controller.js"></script>
+<body>
+<table ng-if="Contactlist.length" class = "table table-striped table-bordered table-hover">
+   <thead>
+ <tr class = "info">
+ <th>Name</th>
+ <th>Email</th>
+ <th>Phone</th>
+ </tr>
+ </thead>
+ <tbody>
+ <p>{{Contactlist.length }}</p>
+ <tr ng-repeat = "contact in Contactlist track by $index">
+ <td>{{ contact.name }}</td>
+ <td>{{ contact.email }}</td>
+ <td>{{ contact.phone }}</td>
+ <br>
+ </tr>
+ </tbody>
+ </table>
+ <div><h4><b>Registered Users</b></h4>
+ </div>
+ </body>
+ </html>

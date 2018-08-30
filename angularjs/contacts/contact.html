@@ -1,0 +1,34 @@
+ <div class = "container" style="width:550px">
+   <div style="text-align:center;color:blue">
+ <h3><b>User Registraion Form</b></h3>
+   </div>
+<div ng-controller = "ContactController">
+   <div align="right">
+   </div>
+<ng-view></ng-view> 
+   <form role = "form" >
+ <div class = "form-group">
+ <label for = "name"> Name:  </label>
+ <input type = "text" id = "name" class = "form-control" placeholder = "Enter Name " ng-model = "contacts.name">
+ <p id="b">fcv</p>
+  <p id="c">fcv</p>
+ <div class = "form-group">
+ <label for = "email"> Email:  </label>
+ <input type = "email" id = "email" class = "form-control" placeholder = "Enter Email " ng-model = "contacts.email">
+ </div>
+ <div class = "form-group">
+ <label for = "password"> Password:  </label>
+ <input type = "password" id = "password" class = "form-control" placeholder = "Enter Password " ng-model = "contacts.password">
+ </div>
+ <div class = "form-group">
+ <label for = "phone"> Phone:  </label>
+ <input type = "text" id = "phone" class = "form-control" placeholder = "Enter Phone " ng-model = "contacts.phone">
+ </div>
+ </div>
+ <input type="hidden" ng-model="contacts.id">
+ <input type="button" class="btn btn-primary" ng-click="addContacts()" class="btn btn-primary" value = "Submit">
+ <input type="button" class="btn btn-primary" ng-click="clearUser()" class="btn btn-primary" value = "Reset">
+  <input type="button" class="btn btn-primary" ng-click="searchUser()" class="btn btn-primary" value = "search" ng-model ="id">
+   </form>
+   <p>{{dupUser}}</p>
+      </div> 
